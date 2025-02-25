@@ -1,124 +1,101 @@
-/* Reset and Global Styles */
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #121212;
-    color: #fff;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #1a1a1a;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1000;
 }
-
 nav h1 {
-    font-size: 24px;
-    color: #ff5733;
+    margin-left: 20px;
 }
-
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 20px;
 }
-
+nav ul li {
+    margin: 0 15px;
+}
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: bold;
     transition: 0.3s;
 }
-
 nav ul li a:hover {
-    color: #ff5733;
+    color: #00c6ff;
 }
 
-/* Sections Styling */
-.section {
-    padding: 80px 10%;
-    border-bottom: 1px solid #333;
+/* Responsive Sidebar Menu */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
 }
-
-h2 {
-    color: #ff5733;
-    font-size: 28px;
-    margin-bottom: 15px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding-top: 60px;
+    transition: 0.3s;
 }
-
-/* About Myself Section */
-#about p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.5;
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
 }
-
-/* Skills Section */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.sidebar a:hover {
+    background: #00c6ff;
 }
-
-.skills-container span {
-    background: #ff5733;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: transform 0.3s ease;
+.sidebar-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
 }
-
-.skills-container span:hover {
-    transform: scale(1.1);
-}
-
-/* Other Sections */
-.section p {
-    font-size: 16px;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 15px;
+    .menu-icon {
+        display: block;
     }
-
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        display: none;
     }
+}
 
-    .section {
-        padding: 60px 5%;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    #about p, .section p {
-        font-size: 16px;
-    }
+/* Sections */
+.section {
+    padding: 60px 20px;
+    margin-top: 80px;
+}
+.section h2 {
+    border-bottom: 2px solid #00c6ff;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
