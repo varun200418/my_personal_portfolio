@@ -3,64 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varun's Portfolio</title>
+    <title>D Varun Kumar Reddy - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Varun</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#participations">Participations</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Navigation Bar -->
+<nav>
+    <h1>Varun Kumar Reddy</h1>
+    <span class="menu-icon" onclick="openMenu()">☰</span>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#participations">Participations</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#practice">Practice Platforms</a></li>
+    </ul>
+</nav>
 
-    <section id="about" class="section">
-        <h2>About Myself</h2>
-        <p>Hello! I'm Varun, a passionate Cloud and Tech Enthusiast. I love problem-solving, innovation, and working with cutting-edge technologies.</p>
-    </section>
+<!-- Sidebar Menu -->
+<div id="sidebar" class="sidebar">
+    <span class="sidebar-close" onclick="closeMenu()">&times;</span>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#participations" onclick="closeMenu()">Participations</a>
+    <a href="#certifications" onclick="closeMenu()">Certifications</a>
+    <a href="#publications" onclick="closeMenu()">Publications</a>
+    <a href="#practice" onclick="closeMenu()">Practice Platforms</a>
+</div>
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <span>C</span>
-            <span>C++</span>
-            <span>Python</span>
-            <span>DSA in C++</span>
-            <span>Frontend Development</span>
-            <span>MySQL</span>
-            <span>AWS Cloud Practitioner</span>
-            <span>Basic Dart Skills</span>
-            <span>Team Management</span>
-        </div>
-    </section>    
+<!-- About Section -->
+<section id="about" class="section">
+    <h2>About Myself</h2>
+    <p>Hi, myself I am D Varun Kumar Reddy. I am a cloud enthusiast and currently, I am looking to learn about cloud technology and its innovations.</p>
+</section>
 
-    <section id="participations" class="section">
-        <h2>Participations</h2>
-        <p>Details about hackathons, coding competitions, and events you've participated in.</p>
-    </section>
+<!-- Skills Section -->
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <span>C</span>
+        <span>C++</span>
+        <span>Python</span>
+        <span>DSA in C++</span>
+        <span>Frontend Development</span>
+        <span>MySQL</span>
+        <span>AWS Cloud Practitioner</span>
+        <span>Basic Dart Skills</span>
+        <span>Team Management</span>
+    </div>
+</section>
 
-    <section id="certifications" class="section">
-        <h2>Certifications</h2>
-        <p>Details about your certifications.</p>
-    </section>
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="https://github.com/varun200418/tic-tac-toe.git" target="_blank">Tic-Tac-Toe</a></li>
+        <li><a href="https://github.com/varun200418/Event-Management-System" target="_blank">Event Management System</a></li>
+        <li><a href="https://github.com/varun200418/my_personal_portfolio.git" target="_blank">My Personal Portfolio</a></li>
+        <li><a href="https://github.com/varun200418/AI-Chat-Bot" target="_blank">AI Chat Bot</a></li>
+    </ul>
+</section>
 
-    <section id="publications" class="section">
-        <h2>Publications</h2>
-        <p>Details about research papers or articles you've published.</p>
-    </section>
+<!-- Participation Section -->
+<section id="participations" class="section">
+    <h2>Participation</h2>
+    <p><strong>My Industrial Visit to HTC Company</strong></p>
+    <p>Today, I had the incredible opportunity to visit HTC Company as part of an industrial visit organized by my college. It was a truly insightful experience that gave me a closer look at how a leading tech company operates and innovates in the industry.</p>
+    <p>From learning about real-world cloud computing applications to understanding the significance of agile project management, the visit deepened my knowledge of the tech industry. I also had the opportunity to interact with professionals and gain insights into how companies function at an enterprise level.</p>
+</section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p>List of your projects with links to GitHub or live demos.</p>
-    </section>
+<!-- Practice Platforms Section -->
+<section id="practice" class="section">
+    <h2>Practice Platforms</h2>
+    <ul>
+        <li><a href="https://www.codechef.com/users/varun2486" target="_blank">CodeChef</a></li>
+        <li><a href="https://leetcode.com/u/varun_kumar_reddy_19/" target="_blank">LeetCode</a></li>
+        <li><a href="https://www.hackerrank.com/profile/Varun2448j" target="_blank">HackerRank</a></li>
+        <li><a href="https://www.geeksforgeeks.org/user/user_anothzuktgb/" target="_blank">GeeksforGeeks</a></li>
+    </ul>
+</section>
 
-    <script src="script.js"></script>
+<script>
+    function openMenu() {
+        document.getElementById("sidebar").style.left = "0";
+    }
+    function closeMenu() {
+        document.getElementById("sidebar").style.left = "-250px";
+    }
+</script>
 </body>
 </html>
